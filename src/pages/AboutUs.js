@@ -1,4 +1,3 @@
-import react from "react";
 //import page components
 import AboutSection from "../components/AboutSection";
 import ServicesSection from "../components/ServicesSection";

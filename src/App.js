@@ -2,7 +2,6 @@
 import AboutUs from "./pages/AboutUs";
 //global style
 import GlobalStyle from "./components/GlobalStyle";
-import "./styles/app.scss";
 
 function App() {
   return (
