@@ -5,48 +5,83 @@ import clock from "../img/clock.svg";
 import diaphragm from "../img/diaphragm.svg";
 import money from "../img/money.svg";
 import teamwork from "../img/teamwork.svg";
+//import styles
+import { Layout, Description, Image } from "../styles/styles";
+import styled from "styled-components";
 
 const ServicesSection = () => {
   return (
-    <div className="services">
-      <div className="description">
+    <ServicesLayout>
+      <Description>
         <h2>
           High <span>quality</span> services
         </h2>
-        <div className="cards">
-          <div className="card">
+        <Cards>
+          <Card>
             <div className="icon">
               <img src={clock} alt="Clock icon" />
-              <h5>Efficient</h5>
-              <p>Lorem ipsum dolor sit amet.</p>
+              <h3>Efficient</h3>
             </div>
-          </div>
-          <div className="card">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </Card>
+          <Card>
             <div className="icon">
               <img src={diaphragm} alt="Diaphragm icon" />
-              <h5>Efficient</h5>
-              <p>Lorem ipsum dolor sit amet.</p>
+              <h3>Diaphragm</h3>
             </div>
-          </div>
-          <div className="card">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </Card>
+          <Card>
             <div className="icon">
               <img src={money} alt="Money icon" />
-              <h5>Efficient</h5>
-              <p>Lorem ipsum dolor sit amet.</p>
+              <h3>Affordable</h3>
             </div>
-          </div>
-          <div className="card">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </Card>
+          <Card>
             <div className="icon">
               <img src={teamwork} alt="Teamwork icon" />
-              <h5>Efficient</h5>
-              <p>Lorem ipsum dolor sit amet.</p>
+              <h3>Teamwork</h3>
             </div>
-          </div>
-        </div>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </Card>
+        </Cards>
+      </Description>
+      <Image>
         <img src={home2} alt="Camera" />
-      </div>
-    </div>
+      </Image>
+    </ServicesLayout>
   );
 };
+
+const ServicesLayout = styled(Layout)`
+  h2 {
+    padding-bottom: 5rem;
+  }
+  p {
+    width: 70%;
+    padding: 2rem 0rem 4rem 0rem;
+  }
+`;
+
+const Cards = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const Card = styled.div`
+  flex-basis: 10rem;
+  padding-right: 4rem;
+  .icon {
+    display: flex;
+    align-items: center;
+    h3 {
+      margin-left: 1rem;
+      background: white;
+      color: black;
+      padding: 1rem;
+    }
+  }
+`;
 
 export default ServicesSection;
