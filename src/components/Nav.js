@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
@@ -8,13 +9,13 @@ const Nav = () => {
       </h1>
       <ul>
         <li>
-          <a href="#">1. About us</a>
+          <Link to="/">1. About us</Link>
         </li>
         <li>
-          <a href="#">2. Our work</a>
+          <Link to="/work">2. Our work</Link>
         </li>
         <li>
-          <a href="#">3. Contact us</a>
+          <Link to="/contact">3. Contact us</Link>
         </li>
       </ul>
     </StyledNav>
