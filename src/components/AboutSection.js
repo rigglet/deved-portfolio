@@ -1,5 +1,5 @@
 import home1 from "../img/home1.png";
-import { Layout, Description, Hide, Image } from "../styles/styles";
+import { Layout, Description, Hide } from "../styles/styles";
 //Framer motion
 import { motion } from "framer-motion";
 import { titleAnimation, fade, photoAnimation } from "../animation";
