@@ -1,5 +1,5 @@
 import home1 from "../img/home1.png";
-import { Layout, Description, Hide } from "../styles/styles";
+import { Layout, Description, Hide, Image } from "../styles/styles";
 //Framer motion
 import { motion } from "framer-motion";
 import { titleAnimation, fade, photoAnimation } from "../animation";
@@ -8,7 +8,6 @@ import Wave from "./Wave";
 
 const AboutSection = () => {
   return (
-    //<div className="about">
     <Layout>
       <Description>
         <motion.div>
@@ -30,9 +29,13 @@ const AboutSection = () => {
         </motion.p>
         <motion.button variants={fade}>Contact us here</motion.button>
       </Description>
-      <motion.Image variants={photoAnimation}>
-        <img src={home1} alt="Guy with a camera" />
-      </motion.Image>
+      <Image>
+        <motion.img
+          variants={photoAnimation}
+          src={home1}
+          alt="Guy with a camera"
+        />
+      </Image>
       <Wave />
     </Layout>
   );
