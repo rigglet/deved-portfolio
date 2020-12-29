@@ -8,7 +8,7 @@ import teamwork from "../img/teamwork.svg";
 import { Layout, Description, Image } from "../styles/styles";
 import styled from "styled-components";
 //import { useInView } from "react-intersection-observer";
-import { fade } from "../animation";
+import { scrollReveal } from "../animation";
 import { useScroll } from "./useScroll";
 
 const ServicesSection = () => {
@@ -16,7 +16,7 @@ const ServicesSection = () => {
   return (
     <ServicesLayout
       ref={element}
-      variants={fade}
+      variants={scrollReveal}
       animate={controls}
       initial="hidden"
     >
