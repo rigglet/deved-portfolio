@@ -5,6 +5,8 @@ import FAQSection from "../components/FAQSection";
 //animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
+//auto page scroll
+import ScrollTop from "../components/scrollTop";
 
 const AboutUs = () => {
   return (
@@ -14,6 +16,7 @@ const AboutUs = () => {
       initial="hidden"
       animate="show"
     >
+      <ScrollTop />
       <AboutSection />
       <ServicesSection />
       <FAQSection />
