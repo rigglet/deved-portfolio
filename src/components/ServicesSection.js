@@ -7,10 +7,19 @@ import teamwork from "../img/teamwork.svg";
 //import styles
 import { Layout, Description, Image } from "../styles/styles";
 import styled from "styled-components";
+//import { useInView } from "react-intersection-observer";
+import { fade } from "../animation";
+import { useScroll } from "./useScroll";
 
 const ServicesSection = () => {
+  const [element, controls] = useScroll();
   return (
-    <ServicesLayout>
+    <ServicesLayout
+      ref={element}
+      variants={fade}
+      animate={controls}
+      initial="hidden"
+    >
       <Description>
         <h2>
           High <span>quality</span> services
